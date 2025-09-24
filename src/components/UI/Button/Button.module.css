@@ -1,0 +1,15 @@
+.btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
