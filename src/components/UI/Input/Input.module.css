@@ -12,7 +12,8 @@
   align-self: start;
 }
 
-.box input {
+.box input,
+.box select {
   padding: 8px 10px;
   border-radius: 8px;
   border: 1px solid #bbb;

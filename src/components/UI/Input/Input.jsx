@@ -2,22 +2,27 @@ import styles from "./Input.module.css";
 
 export default function Input({
   label = "Input Label",
+  name,
   type = "text",
   id,
   list,
-  listId,
   ...props
 }) {
   return (
     <div className={styles.box}>
       <label htmlFor={id}>{label}</label>
-      <input type={type} id={id} {...props} list={listId} />
-      {list && (
-        <datalist id={listId}>
-          {list.map((item) => (
-            <option value={item} />
+
+      {list ? (
+        <select name={name} id={id} required>
+          <option value="">-- Select a driver --</option>
+          {list.map((item, i) => (
+            <option key={i} value={item}>
+              {item}
+            </option>
           ))}
-        </datalist>
+        </select>
+      ) : (
+        <input name={name} type={type} id={id} required {...props} />
       )}
     </div>
   );

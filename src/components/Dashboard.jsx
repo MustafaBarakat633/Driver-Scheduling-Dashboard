@@ -2,8 +2,9 @@ import { ClipboardList } from "lucide-react";
 import CardTitle from "./UI/CardTitle/CardTitle";
 import Table from "./UI/Table/Table";
 
-export default function Dashboard() {
-  const routes = [];
+export default function Dashboard({ drivers }) {
+  const routes = drivers.filter((driver) => driver.route);
+
   return (
     <div className="card">
       <CardTitle title="Dashboard" icon={<ClipboardList />} />
@@ -14,9 +15,9 @@ export default function Dashboard() {
         messageIfEmpty="No routes added yet!"
       >
         {routes.map((item) => (
-          <tr>
+          <tr key={item.id}>
             <td>{item.route}</td>
-            <td>{item.driver}</td>
+            <td>{item.name}</td>
           </tr>
         ))}
       </Table>

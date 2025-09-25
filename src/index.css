@@ -25,7 +25,6 @@ body {
 .flex-box {
   display: flex;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 .side {
@@ -101,4 +100,23 @@ table th {
   padding: 5px 8px;
   border-bottom: 1px solid #ddd;
   text-align: start;
+}
+
+span {
+  color: #fff;
+  padding: 2px 8px;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+span.green {
+  background-color: #4caf50;
+}
+
+span.red {
+  background-color: #e34a4a;
+}
+
+span.warning {
+  background-color: #ffc107;
 }

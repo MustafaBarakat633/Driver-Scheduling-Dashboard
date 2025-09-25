@@ -7,11 +7,13 @@ export default function Table({
 }) {
   return isDataExit ? (
     <table>
-      <tr>
-        <th>{th1}</th>
-        <th>{th2}</th>
-      </tr>
-      {children}
+      <thead>
+        <tr>
+          <th>{th1}</th>
+          <th>{th2}</th>
+        </tr>
+      </thead>
+      <tbody>{children}</tbody>
     </table>
   ) : (
     <p style={{ textAlign: "center" }}>{messageIfEmpty}</p>
