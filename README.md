@@ -37,4 +37,4 @@ The app provides an interface to manage drivers, routes, and assignments with a 
 
 ### Deployment
 
-[Live Demo](https://driver-scheduling-dashboard-c39z6iaxz.vercel.app/) on Vercel
+[Live Demo](https://driver-scheduling-dashboard-bp75thex2.vercel.app/)
